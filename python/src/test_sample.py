@@ -1,18 +1,15 @@
 
 import unittest
 
+
 from person_def import Person
+from course_def import Course
+from student_def import Student
+from course_offering_def import CourseOffering
+from instructor_def import Instructor
+from institution_def import Institution
 
-class Test_Person(unittest.TestCase):
-    def test_PersonInit_WhenAllConditionsAreMet_Succeeds(self):
-        # Arrange
-        person = Person('LastName', 'FirstName', 'School', 'none', 'none', 'none')
-
-        # Act
-        person.last_name = 'Test'
-
-        # Assert
-        assert 5 != 3
-
+      
+    
 if __name__ == '__main__':
     unittest.main() 

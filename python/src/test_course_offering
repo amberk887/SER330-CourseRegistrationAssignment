@@ -1,0 +1,33 @@
+
+import unittest
+
+
+from person_def import Person
+from course_def import Course
+from student_def import Student
+from course_offering_def import CourseOffering
+from instructor_def import Instructor
+from institution_def import Institution
+
+
+
+
+class Test_CourseOffering(unittest.TestCase):
+    def test_CourseOfferingInit_WhenAllConditionsAreMet_Succeeds(self):
+        #Arrange
+        course =Course("Computer Science", 1234, "test", 3)
+        co =  CourseOffering(course, "123", "2023", "3")
+        student1 = Student('first','last','school','02/19/2000','flast')
+        student2 = Student('Amber','last','school','02/19/2000','flast')
+        student3 = Student('emily','last','school','02/19/2000','flast')
+        student4 = Student('bob','last','school','02/19/2000','flast')
+        
+        student_list=[student1,student2,student3,student4]
+
+        # Act
+        co.register_students(student_list)
+        co.submit_grade(student1,95)
+
+        # Assert
+        assert len(co.registered_students) == len(student_list)
+        assert len(student1.course_list)!=0

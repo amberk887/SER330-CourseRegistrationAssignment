@@ -11,4 +11,5 @@ class Person:
 
     @property
     def email(self):
-        return self.username + '@' + self.school.domain
+        return self.username + '@' 
+    #+ self.school.domain

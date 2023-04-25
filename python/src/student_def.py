@@ -1,4 +1,5 @@
 from person_def import Person
+from course_def import Course
 import datetime
 
 class Student(Person):
